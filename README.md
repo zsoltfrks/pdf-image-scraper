@@ -10,7 +10,7 @@ It is designed around a simple folder workflow:
 
 Each PDF gets its own subfolder inside `output/`, named after the source file.
 
-<h3>How It Works</h3>
+## How It Works
 
 When you run the script, it will:
 
@@ -19,7 +19,7 @@ When you run the script, it will:
 3. save extracted images into `output/<pdf-name>/`
 4. skip invalid or password-protected PDFs without stopping the whole batch
 
-<h3>Project Structure</h3>
+## Project Structure
 
 ```text
 pdf-image-scraper/
@@ -30,12 +30,12 @@ pdf-image-scraper/
 └── README.md
 ```
 
-<h3>Requirements</h3>
+## Requirements
 
 - Python 3.10 or newer
 - pip
 
-<h3>Installation</h3>
+## Installation
 
 Clone the repository and install the dependency:
 
@@ -43,7 +43,7 @@ Clone the repository and install the dependency:
 pip install -r requirements.txt
 ```
 
-<h3>Usage</h3>
+## Usage
 
 1. Copy your PDF files into `input/`.
 2. Run the script:
@@ -54,7 +54,7 @@ python main.py
 
 3. Open `output/` to find the extracted images.
 
-<h3>Output Layout</h3>
+## Output Layout
 
 If you place a file named `report.pdf` inside `input/`, the output will look like this:
 
@@ -72,7 +72,7 @@ File names follow this pattern:
 image_p<page-number>_<image-number>.<extension>
 ```
 
-<h3>Error Handling</h3>
+## Error Handling
 
 The script handles a few common problems automatically:
 
@@ -82,7 +82,7 @@ The script handles a few common problems automatically:
 - if a PDF is password-protected, it is skipped
 - if one PDF fails, the script continues processing the rest
 
-<h3>Troubleshooting</h3>
+## Troubleshooting
 
 ### `ModuleNotFoundError: No module named 'frontend'`
 
@@ -104,11 +104,11 @@ python -m pip uninstall fitz
 
 Some PDFs do not contain embedded images. In those cases, the script will still scan the file, but nothing will be written to the output folder.
 
-<h3>Notes</h3>
+## Notes
 
 - `input/` and `output/` contents are ignored by Git
 - the script uses paths relative to the project folder, so you can run it from another working directory and it will still use this repository's `input/` and `output/` folders
 
-<h3>License</h3>
+## License
 
 This project is licensed under the terms in [LICENSE](LICENSE).
